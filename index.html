@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gen-M Place — Curated Picks</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-g">G</span>en‑M <span class="logo-place">Place</span>
+      </a>
+      <div class="search-wrap">
+        <i class="fa fa-search search-icon"></i>
+        <input type="text" id="searchInput" placeholder="Search products…" autocomplete="off"/>
+        <button class="search-clear" id="searchClear"><i class="fa fa-times"></i></button>
+      </div>
+      <nav class="cat-nav" id="catNav">
+        <button class="cat-btn active" data-cat="all">All</button>
+        <button class="cat-btn" data-cat="Electronics">Electronics</button>
+        <button class="cat-btn" data-cat="Fitness">Fitness</button>
+        <button class="cat-btn" data-cat="Home">Home</button>
+        <button class="cat-btn" data-cat="Accessories">Accessories</button>
+        <button class="cat-btn" data-cat="kitchen">kitchen</button>
+        <button class="cat-btn" data-cat="Fashion">Fashion</button>
+        <button class="cat-btn" data-cat="Luxury">Luxury</button>
+      </nav>
+      <div class="nav-actions">
+        <a href="admin.html" class="admin-link"><i class="fa fa-lock"></i> Admin</a>
+        <button class="hamburger" id="hamburger"><i class="fa fa-bars"></i></button>
+      </div>
+    </div>
+    <!-- mobile menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <button class="cat-btn active" data-cat="all">All</button>
+      <button class="cat-btn" data-cat="Electronics">Electronics</button>
+      <button class="cat-btn" data-cat="Fitness">Fitness</button>
+      <button class="cat-btn" data-cat="Home">Home</button>
+      <button class="cat-btn" data-cat="Accessories">Accessories</button>
+      <button class="cat-btn" data-cat="kitchen">kitchen</button>
+      <button class="cat-btn" data-cat="Fashion">Fashion</button>
+      <button class="cat-btn" data-cat="Luxury">Luxury</button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <p class="hero-tag">✦ Handpicked for you</p>
+      <h1 class="hero-title">Discover.<br/>Shop.<br/>Love it.</h1>
+      <p class="hero-sub">Curated products across Electronics, Fitness, Home & Accessories — all in one place.</p>
+      <button class="hero-cta" id="heroCta">Explore Now <i class="fa fa-arrow-right"></i></button>
+    </div>
+    <div class="hero-bg-orb orb1"></div>
+    <div class="hero-bg-orb orb2"></div>
+    <div class="hero-ticker">
+      <span>Electronics &nbsp;·&nbsp; Fitness &nbsp;·&nbsp; Home &nbsp;·&nbsp; Accessories &nbsp;·&nbsp; Electronics &nbsp;·&nbsp; Fitness &nbsp;·&nbsp; Home &nbsp;·&nbsp; Accessories &nbsp;·&nbsp;</span>
+      <span aria-hidden="true">Electronics &nbsp;·&nbsp; Fitness &nbsp;·&nbsp; Home &nbsp;·&nbsp; Accessories &nbsp;·&nbsp; Electronics &nbsp;·&nbsp; Fitness &nbsp;·&nbsp; Home &nbsp;·&nbsp; Accessories &nbsp;·&nbsp;</span>
+    </div>
+  </section>
+
+  <!-- PRODUCT SECTION -->
+  <main class="products-section" id="productsSection">
+    <div class="section-header">
+      <h2 class="section-title" id="sectionTitle">All Products</h2>
+      <span class="product-count" id="productCount"></span>
+    </div>
+    <div class="products-grid" id="productsGrid">
+      <!-- filled by JS -->
+    </div>
+    <div class="no-results hidden" id="noResults">
+      <i class="fa fa-box-open"></i>
+      <p>No products found.</p>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo"><span class="logo-g">G</span>en‑M <span class="logo-place">Place</span></span>
+        <p>Curated affiliate picks, zero clutter.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Categories</h4>
+        <a href="#" data-cat="Electronics">Electronics</a>
+        <a href="#" data-cat="Fitness">Fitness</a>
+        <a href="#" data-cat="Home">Home</a>
+        <a href="#" data-cat="Accessories">Accessories</a>
+        <a href="#" data-cat="kitchin">kitchin</a>
+        <a href="#" data-cat="Fashion">Fashion</a>
+        <a href="#" data-cat="Luxuary">Luxuary</a>
+      </div>
+      <div class="footer-links">
+        <h4>Site</h4>
+        <a href="index.html">Home</a>
+        <a href="admin.html">Admin Panel</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Gen-M Place. Affiliate links may earn a commission.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

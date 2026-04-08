@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin — Gen-M Place</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body class="admin-body">
+
+  <!-- LOGIN SCREEN -->
+  <div class="login-screen" id="loginScreen">
+    <div class="login-card">
+      <a href="index.html" class="logo login-logo"><span class="logo-g">G</span>en‑M <span class="logo-place">Place</span></a>
+      <h2>Admin Login</h2>
+      <p class="login-sub">Enter your credentials to continue</p>
+      <div id="loginError" class="login-error hidden"><i class="fa fa-triangle-exclamation"></i> Invalid username or password.</div>
+      <label>Username
+        <input type="text" id="adminUser" placeholder="admin" autocomplete="off"/>
+      </label>
+      <label>Password
+        <input type="password" id="adminPass" placeholder="••••••••"/>
+      </label>
+      <button class="btn-primary full-width" id="loginBtn">Login <i class="fa fa-arrow-right"></i></button>
+      <a href="index.html" class="back-link"><i class="fa fa-arrow-left"></i> Back to store</a>
+    </div>
+    <div class="hero-bg-orb orb1"></div>
+    <div class="hero-bg-orb orb2"></div>
+  </div>
+
+  <!-- DASHBOARD -->
+  <div class="dashboard hidden" id="dashboard">
+    <aside class="sidebar">
+      <a href="index.html" class="logo sidebar-logo"><span class="logo-g">G</span>en‑M</a>
+      <nav class="sidebar-nav">
+        <button class="sidebar-btn active" data-panel="add"><i class="fa fa-plus"></i> Add Product</button>
+        <button class="sidebar-btn" data-panel="manage"><i class="fa fa-list"></i> Manage Products</button>
+        <button class="sidebar-btn" id="logoutBtn"><i class="fa fa-right-from-bracket"></i> Logout</button>
+      </nav>
+    </aside>
+
+    <main class="dash-main">
+      <div class="dash-header">
+        <h2 id="dashTitle">Add Product</h2>
+        <a href="index.html" class="view-store-btn"><i class="fa fa-store"></i> View Store</a>
+      </div>
+
+      <!-- ADD PANEL -->
+      <div class="dash-panel" id="panelAdd">
+        <div class="admin-card">
+          <div id="formSuccess" class="form-success hidden"><i class="fa fa-check-circle"></i> Product added successfully!</div>
+          <div class="form-grid">
+            <label class="form-group">
+              <span>Product Name <span class="req">*</span></span>
+              <input type="text" id="prodName" placeholder="e.g. Wireless Earbuds Pro"/>
+            </label>
+            <label class="form-group">
+              <span>Price (₹ or $) <span class="req">*</span></span>
+              <input type="text" id="prodPrice" placeholder="e.g. ₹1,299"/>
+            </label>
+            <label class="form-group">
+              <span>Category <span class="req">*</span></span>
+              <select id="prodCat">
+                <option value="">Select category…</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Fitness">Fitness</option>
+                <option value="Home">Home</option>
+                <option value="Accessories">Accessories</option>
+              </select>
+            </label>
+            <label class="form-group">
+              <span>Affiliate Link <span class="req">*</span></span>
+              <input type="url" id="prodLink" placeholder="https://…"/>
+            </label>
+            <label class="form-group full-col">
+              <span>Image URL <span class="req">*</span></span>
+              <input type="url" id="prodImg" placeholder="https://…"/>
+            </label>
+            <label class="form-group full-col">
+              <span>Description</span>
+              <textarea id="prodDesc" rows="3" placeholder="Short product description…"></textarea>
+            </label>
+          </div>
+          <div id="formError" class="form-error hidden"></div>
+          <button class="btn-primary" id="addProductBtn"><i class="fa fa-plus"></i> Add Product</button>
+        </div>
+      </div>
+
+      <!-- MANAGE PANEL -->
+      <div class="dash-panel hidden" id="panelManage">
+        <div class="admin-card">
+          <div class="manage-toolbar">
+            <input type="text" id="manageSearch" placeholder="Search products…"/>
+            <span class="manage-count" id="manageCount"></span>
+          </div>
+          <div class="manage-list" id="manageList"></div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
